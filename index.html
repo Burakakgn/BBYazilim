@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBYazılım</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(22, 22, 22);
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .site-header {
+        width: 100%;
+        height: 155px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(22, 22, 22);
+        border-bottom: 1px solid #30363d;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bb-logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-weight: bold;
+      }
+
+      .bb-wrap {
+        position: relative;
+        width: 80px;
+        height: 60px;
+      }
+
+      .b-top,
+      .b-bottom {
+        position: absolute;
+        font-size: 60px;
+        opacity: 0;
+        color: white;
+      }
+
+      .b-top {
+        top: -100px;
+        left: 0;
+        animation: dropB 1s forwards;
+      }
+
+      .b-bottom {
+        bottom: -100px;
+        left: 30px;
+        animation: riseB 1s forwards 1s;
+      }
+
+      .yazilim {
+        display: block;
+        font-size: 48px;
+        margin-top: 21px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        opacity: 0;
+        animation: slideYazilim 2s forwards 1s;
+        color: white;
+      }
+
+      @keyframes dropB {
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes riseB {
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideYazilim {
+        to {
+          opacity: 1;
+          transform: translateX(-27px);
+        }
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 22px;
+        margin-top: 15px;
+        font-size: 25px;
+        color: rgb(224, 211, 173);
+      }
+
+      nav a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: rgb(224, 211, 173);
+      }
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+        background-color: rgb(224, 211, 173);
+      }
+
+      h3 {
+        font-size: 35px;
+        color: orange;
+        margin: 50px 0 0 50px;
+      }
+
+      .ourservices {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: white;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .ourserviceskutu {
+        padding: 15px;
+        border: 1px solid rgb(27, 27, 27);
+        background-color: #23272c;
+        border-radius: 20px;
+      }
+
+      .ourserviceskutu h2 {
+        margin: 10px 0;
+      }
+
+      .ourserviceskutu p {
+        line-height: 1.6;
+      }
+
+      hr {
+        color: #30363d;
+        border: 1px solid;
+        margin: 30px 0;
+      }
+
+      .alt {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .alt a {
+        text-decoration: none;
+        color: white;
+      }
+      .ortakısım {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+      }
+      .a1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0 0 60px;
+        gap: 14px;
+      }
+      .a1 h2 {
+        font-size: 60px;
+        color: rgb(224, 211, 173);
+      }
+      .a1 p {
+        font-size: 26px;
+        color: rgb(224, 211, 173);
+      }
+      .a1 button {
+        font-size: 22px;
+        margin-top: 10px;
+        border-radius: 20px;
+        background-color: #23272c;
+        color: rgb(224, 211, 173);
+        width: 180px;
+        height: 70px;
+        border: 1px solid rgb(27, 27, 27);
+      }
+      .a2 {
+        display: flex;
+        justify-self: flex-end;
+      }
+      .a3 {
+        margin-left: 60px;
+        margin-top: 10px;
+      }
+      .a3 h2 {
+        margin-bottom: 10px;
+        font-size: 35px;
+        color: rgb(224, 211, 173);
+      }
+      .a3 p {
+        color: rgb(224, 211, 173);
+        font-size: 23px;
+      }
+      .a4 {
+        margin-top: 30px;
+        margin-right: 60px;
+        align-content: center;
+        justify-self: flex-end;
+      }
+      .a4 div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-color: #30363d;
+        width: 320px;
+        height: 110px;
+        border-radius: 20px;
+        color: rgb(224, 211, 173);
+      }
+      .a4 h2 {
+        font-size: 30px;
+      }
+      @media (max-width: 768px) {
+        body {
+          width: 95%;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 15px;
+          font-size: 24px;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .ourservices {
+          grid-template-columns: 1fr;
+          margin: 15px;
+        }
+        .ortakısım {
+          display: flex;
+          flex-direction: column;
+        }
+        .a1 {
+          margin: 0;
+        }
+        .a2 img {
+          margin-top: 30px;
+          width: 100%;
+          height: auto;
+        }
+        .a3 {
+          padding-top: 30px;
+          margin: 0;
+          text-align: center;
+        }
+        .a4 {
+          margin: 30px 0 0 0;
+          align-self: center;
+        }
+        h3 {
+          margin: 30px 0 30px 0;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="bb-logo">
+        <div class="bb-wrap">
+          <span class="b-top">B</span>
+          <span class="b-bottom">B</span>
+        </div>
+        <span class="yazilim">Yazılım</span>
+      </div>
+    </header>
+
+    <nav>
+      <a href="index.html">Home Page</a>
+      <a href="hakkımda.html">About Us</a>
+      <a href="satis.html">Store Sells</a>
+      <a href="ourproject.html">Our Projects</a>
+    </nav>
+
+    <div class="ortakısım">
+      <div class="a1">
+        <h2>We Develop Software</h2>
+        <p>We provide custom software solutions with our Team</p>
+        <button>Get Started</button>
+      </div>
+      <div class="a2">
+        <img src="img/bb.jpg" width="500px" height="400px" />
+      </div>
+      <div class="a3">
+        <h2>About Us</h2>
+        <p>
+          We are a team of 2 Person for now we both have great ability in coding
+          and also in data analyzing if you wanna know more information about us
+          please go to the About Us page
+        </p>
+      </div>
+      <div class="a4">
+        <div>
+          <img src="" width="50px" height="50px" alt="" />
+          <h2>About Us</h2>
+        </div>
+      </div>
+    </div>
+
+    <h3>Our Services</h3>
+    <div class="ourservices">
+      <div class="ourserviceskutu">
+        <img src="" alt="" width="30px" height="30px" />
+        <h2>Web Development</h2>
+        <p>
+          We develop any kind of website with SEO Compatible and also with
+          Responsive Designs For more information please send messages so that
+          we can discuss what we can do together
+        </p>
+      </div>
+      <div class="ourserviceskutu">
+        <img src="" alt="" width="30px" height="30px" />
+        <h2>Data Analysing</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          voluptate suscipit autem a, molestiae ab deleniti tempora soluta, id
+        </p>
+      </div>
+      <div class="ourserviceskutu">
+        <img src="" alt="" width="30px" height="30px" />
+        <h2>Translating</h2>
+        <p>
+          We can translate any text Turkısh to English or English to Turkısh
+          feel free to message us
+        </p>
+      </div>
+    </div>
+
+    <hr />
+    <footer class="alt">
+      <p>Contact Us for more Projects</p>
+      <a href="mailto:bbyazilim6@gmail.com">bbyazilim6@gmail.com</a>
+    </footer>
+  </body>
+</html>
