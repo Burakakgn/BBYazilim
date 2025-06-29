@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Projects | BBYazılım</title>
+  <style>
+    /* ----- Genel Reset ve Tipografi ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1B1B1B;
+      color: #E0D1AD;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ----- Navigasyon ----- */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      background: #272727;
+      border-bottom: 1px solid #333;
+    }
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* ----- Our Projects Bölümü ----- */
+    #our_projects {
+      padding: 60px 20px;
+      background-color: #1B1B1B;
+    }
+    #our_projects .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #E0D1AD;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #272727;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin: 16px;
+      color: #fff;
+    }
+    .project-card p {
+      flex-grow: 1;
+      margin: 0 16px 16px;
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.5;
+    }
+    .project-card .btn {
+      margin: 0 16px 20px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #E0D1AD;
+      color: #1B1B1B;
+      font-weight: 600;
+      transition: background-color 0.3s;
+      align-self: flex-start;
+    }
+    .project-card .btn:hover {
+      background-color: #d0c0a5;
+    }
+
+    /* ----- Responsive ----- */
+    @media (max-width: 600px) {
+      .section-title { font-size: 2rem; }
+      .project-card h3 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigasyon -->
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="hakkımızda.html">Hakkımızda</a>
+    <a href="satis.html">Mağaza</a>
+    <a href="our_projects.html">Projelerimiz</a>
+  </nav>
+
+  <!-- Our Projects Bölümü -->
+  <section id="our_projects">
+    <div class="container">
+      <h2 class="section-title">Projelerimiz</h2>
+      <div class="projects-grid">
+        <!-- Proje 1 -->
+        <div class="project-card">
+          <img src="img/project1.jpg" alt="Proje 1">
+          <h3>Başlık 1</h3>
+          <p>Bu proje, X teknolojisini kullanarak Y amacına hizmet eder.</p>
+          <a href="#" class="btn">Detaylara Git</a>
+        </div>
+        <!-- Proje 2 -->
+        <div class="project-card">
+          <img src="img/project2.jpg" alt="Proje 2">
+          <h3>Başlık 2</h3>
+          <p>Bu proje, A altyapısı ile B çözümlerini sunar.</p>
+          <a href="#" class="btn">Detaylara Git</a>
+        </div>
+        <!-- Proje 3 -->
+        <div class="project-card">
+          <img src="img/project3.jpg" alt="Proje 3">
+          <h3>Başlık 3</h3>
+          <p>C framework'ü ile D işlevselliği sağlanmıştır.</p>
+          <a href="#" class="btn">Detaylara Git</a>
+        </div>
+        <!-- Haber Sitesi Projesi -->
+        <div class="project-card">
+          <h3>Haber Sitesi</h3>
+          <p>Dinamik haber sitesi projesi.</p>
+          <a href="hindex.html" class="btn">Detaylara Git</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
