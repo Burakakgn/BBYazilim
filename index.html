@@ -36,13 +36,11 @@
         gap: 20px;
         font-weight: bold;
       }
-
       .bb-wrap {
         position: relative;
         width: 80px;
         height: 60px;
       }
-
       .b-top,
       .b-bottom {
         position: absolute;
@@ -50,13 +48,11 @@
         opacity: 0;
         color: white;
       }
-
       .b-top {
         top: -100px;
         left: 0;
         animation: dropB 1s forwards;
       }
-
       .b-bottom {
         bottom: -100px;
         left: 30px;
@@ -70,8 +66,8 @@
         letter-spacing: 2px;
         font-weight: 600;
         opacity: 0;
-        animation: slideYazilim 2s forwards 1s;
         color: white;
+        animation: slideYazilim 2s forwards 1s;
       }
 
       @keyframes dropB {
@@ -80,14 +76,12 @@
           opacity: 1;
         }
       }
-
       @keyframes riseB {
         to {
           bottom: 0;
           opacity: 1;
         }
       }
-
       @keyframes slideYazilim {
         to {
           opacity: 1;
@@ -97,22 +91,16 @@
 
       nav {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         padding: 22px;
         margin-top: 15px;
         font-size: 25px;
         color: rgb(224, 211, 173);
       }
-
       nav a {
-        display: inline-block;
         position: relative;
         text-decoration: none;
         color: rgb(224, 211, 173);
-      }
-      nav a:hover::after {
-        transform: scaleX(1);
       }
       nav a::after {
         content: "";
@@ -126,6 +114,9 @@
         transition: transform 0.3s ease;
         background-color: rgb(224, 211, 173);
       }
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
 
       h3 {
         font-size: 35px;
@@ -135,23 +126,20 @@
 
       .ourservices {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        color: white;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         margin-top: 30px;
+        color: white;
       }
-
       .ourserviceskutu {
         padding: 15px;
         border: 1px solid rgb(27, 27, 27);
-        background-color: #23272c;
+        background: #23272c;
         border-radius: 20px;
       }
-
       .ourserviceskutu h2 {
         margin: 10px 0;
       }
-
       .ourserviceskutu p {
         line-height: 1.6;
       }
@@ -171,23 +159,27 @@
         align-items: center;
         margin-bottom: 40px;
       }
-
       .alt a {
         text-decoration: none;
         color: white;
       }
+
+      /* -------- ORTAKISIM -------- */
       .ortakısım {
         margin-top: 40px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr; /* 2 sütun */
+        grid-template-rows: repeat(2, 1fr); /* 2 eşit satır */
       }
+
       .a1 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 30px 0 0 60px;
         gap: 14px;
+        margin: 30px 0 0 60px;
+        grid-column: 1;
+        grid-row: 1; /* sol-üst */
       }
       .a1 h2 {
         font-size: 60px;
@@ -200,20 +192,25 @@
       .a1 button {
         font-size: 22px;
         margin-top: 10px;
-        border-radius: 20px;
-        background-color: #23272c;
-        color: rgb(224, 211, 173);
         width: 180px;
         height: 70px;
+        border-radius: 20px;
+        background: #23272c;
+        color: rgb(224, 211, 173);
         border: 1px solid rgb(27, 27, 27);
       }
+
       .a2 {
-        display: flex;
+        grid-column: 2;
+        grid-row: 1 / 3; /* sağ, iki satır kaplar */
         justify-self: flex-end;
+        align-self: stretch;
       }
+
       .a3 {
-        margin-left: 60px;
-        margin-top: 10px;
+        margin: 10px 0 0 60px;
+        grid-column: 1;
+        grid-row: 2; /* sol-alt */
       }
       .a3 h2 {
         margin-bottom: 10px;
@@ -221,35 +218,15 @@
         color: rgb(224, 211, 173);
       }
       .a3 p {
-        color: rgb(224, 211, 173);
         font-size: 23px;
-      }
-      .a4 {
-        margin-top: 30px;
-        margin-right: 60px;
-        align-content: center;
-        justify-self: flex-end;
-      }
-      .a4 div {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        background-color: #30363d;
-        width: 320px;
-        height: 110px;
-        border-radius: 20px;
         color: rgb(224, 211, 173);
       }
-      .a4 h2 {
-        font-size: 30px;
-      }
+
+      /* Responsive */
       @media (max-width: 768px) {
         body {
           width: 95%;
         }
-
         nav {
           flex-direction: column;
           gap: 15px;
@@ -257,7 +234,6 @@
           padding: 10px;
           text-align: center;
         }
-
         .ourservices {
           grid-template-columns: 1fr;
           margin: 15px;
@@ -275,21 +251,18 @@
           height: auto;
         }
         .a3 {
-          padding-top: 30px;
           margin: 0;
+          padding-top: 30px;
           text-align: center;
         }
-        .a4 {
-          margin: 30px 0 0 0;
-          align-self: center;
-        }
         h3 {
-          margin: 30px 0 30px 0;
+          margin: 30px 0;
           text-align: center;
         }
       }
     </style>
   </head>
+
   <body>
     <header class="site-header">
       <div class="bb-logo">
@@ -314,55 +287,53 @@
         <p>We provide custom software solutions with our Team</p>
         <button>Get Started</button>
       </div>
+
       <div class="a2">
-        <img src="img/bb.jpg" width="500px" height="400px" />
+        <img
+          src="img/bb.jpg"
+          width="600"
+          height="550"
+          alt="Team working illustration"
+        />
       </div>
+
       <div class="a3">
         <h2>About Us</h2>
         <p>
-          We are a team of 2 Person for now we both have great ability in coding
-          and also in data analyzing if you wanna know more information about us
-          please go to the About Us page
+          We are a team of 2 people. We both have strong skills in coding and
+          data analysis. For more information, please visit the About&nbsp;Us
+          page.
         </p>
-      </div>
-      <div class="a4">
-        <div>
-          <img src="" width="50px" height="50px" alt="" />
-          <h2>About Us</h2>
-        </div>
       </div>
     </div>
 
     <h3>Our Services</h3>
     <div class="ourservices">
       <div class="ourserviceskutu">
-        <img src="" alt="" width="30px" height="30px" />
+        <img src="" alt="" width="30" height="30" />
         <h2>Web Development</h2>
         <p>
-          We develop any kind of website with SEO Compatible and also with
-          Responsive Designs For more information please send messages so that
-          we can discuss what we can do together
+          We build any kind of website with SEO-friendly, responsive designs.
+          Let’s discuss what we can do together.
         </p>
       </div>
       <div class="ourserviceskutu">
-        <img src="" alt="" width="30px" height="30px" />
+        <img src="" alt="" width="30" height="30" />
         <h2>Data Analysing</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          voluptate suscipit autem a, molestiae ab deleniti tempora soluta, id
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+          voluptate suscipit autem a, molestiae ab deleniti tempora soluta.
         </p>
       </div>
       <div class="ourserviceskutu">
-        <img src="" alt="" width="30px" height="30px" />
+        <img src="" alt="" width="30" height="30" />
         <h2>Translating</h2>
-        <p>
-          We can translate any text Turkısh to English or English to Turkısh
-          feel free to message us
-        </p>
+        <p>We translate any text Turkish ↔ English. Feel free to message us.</p>
       </div>
     </div>
 
     <hr />
+
     <footer class="alt">
       <p>Contact Us for more Projects</p>
       <a href="mailto:bbyazilim6@gmail.com">bbyazilim6@gmail.com</a>
