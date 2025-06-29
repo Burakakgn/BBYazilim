@@ -1,0 +1,147 @@
+/* Genel Tema ve Düzenleme Stil Dosyası */
+:root {
+  /* Aydınlık, canlı renk paleti */
+  --bg-light: #fefefe;
+  --bg-secondary: #fafafa;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --accent: #007acc;
+  --border: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  color: var(--text-secondary);
+  margin-bottom: .5rem;
+}
+
+nav a {
+  color: var(--text-primary);
+  margin: 0 .75rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 3fr;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.sidebar, .right-sidebar {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  position: sticky;
+  top: 2rem;
+}
+
+.ad-unit {
+  background: var(--bg-light);
+  padding: .5rem;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+main {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.news-item.even {
+  flex-direction: row-reverse;
+}
+
+.news-item .img img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.news-item .text {
+  flex: 1;
+}
+
+.news-item .text h3 {
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+
+.news-item .text p.explanation {
+  text-align: justify;
+  margin-bottom: .5rem;
+}
+
+.bottom-ad {
+  background: var(--bg-light);
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar, .right-sidebar {
+    position: relative;
+    top: auto;
+  }
+  .news-item {
+    flex-direction: column;
+  }
+}
