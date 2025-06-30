@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4413036222011222"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satış Mağazamız | BBYazılım</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body */
+      body {
+        background-color: rgb(22, 22, 22);
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(224, 211, 173);
+      }
+      header {
+        color: white;
+      }
+
+      /* Header & Logo */
+      .site-header {
+        width: 100%;
+        height: 155px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        background-color: rgb(22, 22, 22);
+        border-bottom: 1px solid #30363d;
+      }
+      .bb-logo { display: flex; align-items: center; gap: 20px; font-weight: bold; }
+      .bb-wrap { position: relative; width: 80px; height: 60px; }
+      .b-top, .b-bottom { position: absolute; font-size: 60px; opacity: 0; }
+      .b-top { top: -100px; animation: dropB 1s forwards; }
+      .b-bottom { bottom: -100px; left: 30px; animation: riseB 1s forwards 1s; }
+      .yazilim {
+        display: block; font-size: 48px; margin-top: 21px;
+        letter-spacing: 2px; font-weight: 600;
+        opacity: 0; animation: slideYazilim 2s forwards 1s;
+      }
+      @keyframes dropB { to { top: 0; opacity: 1; } }
+      @keyframes riseB { to { bottom: 0; opacity: 1; } }
+      @keyframes slideYazilim { to { opacity: 1; transform: translateX(-27px); } }
+
+      /* Navigation */
+      nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 22px;
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(224, 211, 173);
+      }
+      nav a {
+        position: relative;
+        text-decoration: none;
+        color: rgb(224, 211, 173);
+      }
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+        background-color: rgb(224, 211, 173);
+      }
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
+
+      /* Başlık */
+      .center-title {
+        text-align: center; margin-top: 40px; color: rgb(224, 211, 173);
+      }
+
+      /* Dikey Satış Listesi */
+      .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 50px auto;
+        max-width: 800px;
+      }
+      .card {
+        background-color: #1e1e1e;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        padding: 30px;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      }
+      .card h3 {
+        margin-bottom: 20px; font-size: 26px; color: #fff;
+      }
+      .card p, .card ul {
+        font-size: 16px; line-height: 1.6; margin-bottom: 15px;
+      }
+      .card ul {
+        list-style: disc inside;
+      }
+      .card a {
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(224, 211, 173);
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin: 60px 0 30px;
+        font-size: 16px;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        body { width: 95%; }
+        nav { flex-direction: column; gap: 10px; font-size: 20px; }
+        .card { padding: 20px; }
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    <!-- ANİMASYONLU LOGO -->
+    <header class="site-header">
+      <div class="bb-logo">
+        <div class="bb-wrap">
+          <span class="b-top">B</span>
+          <span class="b-bottom">B</span>
+        </div>
+        <span class="yazilim">Mağaza</span>
+      </div>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkımda.html">Hakkımda</a>
+      <a href="satis.html">Mağaza</a>
+      <a href="ourproject.html">Projeler</a>
+    </nav>
+
+    <!-- BAŞLIK -->
+    <h2 class="center-title">BBYazılım Hizmetleri</h2>
+    <p class="center-title">İhtiyacınıza en uygun, kaliteli ve zamanında teslim garantili çözümler.</p>
+
+    <!-- SATIŞ LİSTESİ -->
+    <div class="cards-container">
+      <div class="card">
+        <h3>🌐 Web Sitesi Geliştirme</h3>
+        <p>
+          İşletmenizin dijital vitrini olacak, kullanıcı deneyimini en üst seviyeye taşıyan
+          özel tasarım web siteleri.
+        </p>
+        <ul>
+          <li>Detaylı keşif & analiz ile hedef kitlenize uygun UX/UI</li>
+          <li>%100 mobil uyumlu, SEO optimizasyonlu ve hızlı açılan sayfalar</li>
+          <li>Kolay içerik yönetimi için WordPress, Netlify CMS veya özel panel</li>
+          <li>7/24 performans ve güvenlik takibi</li>
+        </ul>
+        <strong>Fiyat:</strong> ₺1.500 – ₺2.500 arası, paket detayı için iletişime geçin.<br/>
+        <a href="https://bionluk.com/burakakgun0" target="_blank">Burak'ın Profili &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>📊 SPSS & Veri Analizi</h3>
+        <p>
+          Akademik makalelerden sektör raporlarına kadar verinizi anlamlı içgörülere dönüştürüyoruz.
+        </p>
+        <ul>
+          <li>Veri temizleme, ön işleme ve görselleştirme</li>
+          <li>Tanımlayıcı istatistikler & ileri düzey hipotez testleri</li>
+          <li>Çok değişkenli analiz (Regresyon, Faktör, Kümeleme vb.)</li>
+          <li>Detaylı raporlama ve sunum desteği</li>
+        </ul>
+        <strong>Fiyat:</strong> ₺500 – ₺1.000 arası, projenin büyüklüğüne göre.</br>
+        <a href="https://bionluk.com/bedrisarac" target="_blank">Bedri'nin Profili &rarr;</a>
+      </div>
+
+      <div class="card">
+        <h3>🗄️ SQL & Veritabanı Danışmanlığı</h3>
+        <p>
+          Veri altyapınızı baştan inşa edin veya mevcut sisteminizi profesyonelce optimize ettirin.
+        </p>
+        <ul>
+          <li>ERD tasarımı ve normalizasyon</li>
+          <li>Yüksek performanslı SQL sorgu yazımı</li>
+          <li>ETL süreçleri, otomasyon ve Supabase/MySQL/PostgreSQL entegrasyonu</li>
+          <li>Docker & CI/CD ile güvenilir dağıtım</li>
+        </ul>
+        <strong>Fiyat:</strong> ₺700 – ₺1.200 arası, kapsamına göre.</br>
+        <a href="https://bionluk.com/bedrisarac" target="_blank">Bedri'nin Profili &rarr;</a>
+        
+      </div>
+
+      <div class="card">
+        <h3>📝 İngilizce Teknik Tercüme</h3>
+        <p>
+          Proje raporlarınız, makaleleriniz veya teknik dokümanlarınız için %100 insan eliyle
+          titiz çeviri.
+        </p>
+        <ul>
+          <li>Terminolojiye %100 uyum, YDS 90+ kalitesinde</li>
+          <li>Hızlı teslimat & ücretsiz revizyon</li>
+          <li>Gizlilik sözleşmesi ile güvenlik garantisi</li>
+        </ul>
+        <strong>Fiyat:</strong> ₺400 – ₺800 arası, kelime sayısına göre.</br>
+        <a href="https://bionluk.com/burakakgun0" target="_blank">Burak'ın Profili &rarr;</a>
+      </div>
+    </div>
+    
+    <!-- İLETİŞİM -->
+    <footer>
+      Daha kapsamlı projeleriniz için bize yazın: <br/>
+      📧 <a href="mailto:bbyazilim6@gmail.com">bbyazilim6@gmail.com</a>
+    </footer>
+  </body>
+</html>
